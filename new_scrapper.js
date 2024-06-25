@@ -10,7 +10,7 @@ const { writeLinksToFile } = require('./scrapingUtils');
 const { launchBrowser } = require('./scrapingUtils');
 
 async function newGetProcessorLinks(page) {
-    const url = 'https://www.intel.com/content/www/us/en/products/details/processors.html'; // Replace 'URL_OF_YOUR_PAGE' with the actual URL
+    const url = 'https://www.intel.com/content/www/us/en/products/details/processors.html';
     await page.goto(url, { waitUntil: 'domcontentloaded' });
   
     // Extracting links from col-sm-3 elements inside panel panel-default

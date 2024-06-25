@@ -32,17 +32,6 @@ h1, p {
     color: white;
     z-index: 2;
 }
-/* 
-#inputBox {
-    width: 45vh;
-    padding: 1.5vh;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: #2a114a;
-    color: white;
-    position: relative;
-    z-index: 2;
-} */
 
 #inputBox::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -52,15 +41,14 @@ h1, p {
     background-color: #a838a5;
     color: white;
     border: none;
-    padding: 2vh 4vh;
-    border-radius: 5px;
+    align-items: center;
     cursor: pointer;
     transition: background-color 0.5s, filter 0.5s;
     z-index: 2;
 }
 
 #okButton:hover {
-    background-color: #b12aaa;
+    background-color: #c534be;
     filter: blur(0.0001px);
 }
 
@@ -86,11 +74,11 @@ h1, p {
     backdrop-filter: blur(10px);
     border: 1px solid #ccc;
     border-radius: 4px;
+    align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     z-index: 2;
     top: calc(100% + 5px);
-    left: 29%;
     width: 45vh;
     overflow-y: auto;
     opacity: 0;
@@ -104,31 +92,101 @@ h1, p {
     left: 0;
 }
 
-#processorInfo {
-    background-color: rgba(42, 17, 74, 0.8); /* Adjust background color */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    position: absolute;
+.wrapper > div {
+    border: 2px solid #8972ae;
+    border-radius: 5px;
+    background-color: #432d67;
+    padding: 1em;
+    color: white;
+    z-index: 0;
+}
+  
+.wrapper {
+    display: grid;
+    padding: 5vh;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #432d67;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.box_dimension {
+    background-color: rgba(42, 17, 74, 0.8);
+    padding: 10px;
+    border-radius: 5px;
     top: calc(100% + 10px);
     left: 0;
     z-index: 1;
-    width: 45vh; /* Adjust width based on your design */
+    width: 45vh;
     text-align: center;
     color:white;
+    transition: 0.25s;
 }
-
-
 
 .autocomplete-dropdown div {
     padding: 1vh;
+    align-items: center;
     cursor: pointer;
     color: white;
-    transition: background-color 0.3s, color 0.3s; /* Add transition effect for better visuals */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .autocomplete-dropdown div:hover {
-    background-color: #b12aaa;
-    color: #ffffff; /* Change color on hover */
+    background-color: #c534be;
+    filter: blur(0.0001px);
+    transition: background-color 0.5s, filter 0.5s;
+}
+
+.removeButton {
+    color:white;
+    background-color: rgb(231, 88, 88);
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: 90%;
+}
+
+.removeButton:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+/*credit : https://getcssscan.com/css-buttons-examples*/
+.button {
+  background-color: #a838a5;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: background-color 0.5s, filter 0.5s;
+
+}
+
+.button:hover,
+.button:focus {
+    background-color: #c534be;
+    filter: blur(0.0001px);
 }
 
 

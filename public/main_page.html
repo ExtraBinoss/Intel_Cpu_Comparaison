@@ -13,18 +13,25 @@
             <span></span>
             <span></span>
             <span></span>
-            <!-- ... (other background spans) -->
         </div>
         <div class="content">
             <h1>Another CPU benchmark</h1>
+            
             <p>Enter the processor you want to know about.</p>
+            <button id="newCrawlerButton" class="button" onclick="triggerNewCrawler()">Trigger New Crawler</button>
+            <button id="newScrapeButton" class="button" onclick="triggerNewScrape()">Trigger New Scrape</button>
+            <button id="intelDownloaderButton" class="button" onclick="triggerIntelDownloader()">Trigger Intel Downloader</button>
+            <button id="csvParser" class="button" onclick="triggerCsvParser()">Trigger Csv Parser</button>
+        <div id="statusMessage"></div>
             <div class="input-container">
                 <div id="output"></div>
+                <br>
                 <input type="text" id="inputBox" placeholder="processor">
                 <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
-                <button id="okButton" onclick="inputBox()">OK</button>
+                <button id="okButton" class="button" onclick="inputBox()">OK</button>
             </div>
-            <div id="processorInfo"></div>
+        </div>
+        <div class="wrapper">
         </div>
     </div>
     <script type="module" src="logic.js"></script>

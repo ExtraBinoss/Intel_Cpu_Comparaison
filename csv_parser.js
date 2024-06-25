@@ -68,7 +68,6 @@ async function processCsvFiles() {
   removeCharacterFromFiles(csvDirPath, '‡');
   removeCharacterFromFiles(csvDirPath, '*');
   removeCharacterFromFiles(csvDirPath, '®');
-  console.log("im here");
   const csvFiles = fs.readdirSync(csvDirPath);
   
   for (const file of csvFiles) {

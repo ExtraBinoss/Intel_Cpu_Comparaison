@@ -58,34 +58,83 @@ document.getElementById("okButton").addEventListener("click", function() {
 });
 });
 
+function displayProcessorInfo(processor)
+{
+    const processorInfoContainer = document.createElement('div');
+    processorInfoContainer.classList.add('box_dimension', 'processorInfo');
+    
+    const processorInfoContent = document.createElement('div');
 
-function displayProcessorInfo(processor) {
-    const processorInfoContainer = document.getElementById('processorInfo');
-
-    // Clear any existing content
-    processorInfoContainer.innerHTML = '';
-
-    // Create and append HTML elements with processor information
     for (const [key, value] of Object.entries(processor)) {
         const infoElement = document.createElement('div');
         infoElement.innerHTML = `<strong>${key}:</strong> ${value}`;
-        processorInfoContainer.appendChild(infoElement);
+        processorInfoContent.appendChild(infoElement);
     }
+    
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('removeButton');
+    removeButton.textContent = '⨯';
+    removeButton.addEventListener('click', function() {
+        processorInfoContainer.remove();
+    });
+    processorInfoContainer.appendChild(removeButton);
+    processorInfoContainer.appendChild(processorInfoContent);
+
+    document.querySelector('.wrapper').appendChild(processorInfoContainer);
 }
+
 
 
 window.inputBox = function() {
     var x = document.getElementById("inputBox").value;
-    // Fetch the processors data
 }
+        document.getElementById("newCrawlerButton").addEventListener("click", async function() {
+            try {
+                const response = await fetch('/newCrawler');
+                const data = await response.text();
+                console.log(data);
+                document.getElementById('statusMessage').innerText = data;
+            } catch (error) {
+                console.error('Error occurred while triggering new crawler:', error);
+            }
+        });
+        document.getElementById("newScrapeButton").addEventListener("click", async function() {
+            try {
+                const response = await fetch('/newScrape');
+                const data = await response.text();
+                console.log(data);
+                document.getElementById('statusMessage').innerText = data;
+            } catch (error) {
+                console.error('Error occurred while triggering new scrape:', error);
+            }
+        });
+        document.getElementById("intelDownloaderButton").addEventListener("click", async function() {
+            try {
+                const response = await fetch('/intelDownloader');
+                const data = await response.text();
+                console.log(data);
+                document.getElementById('statusMessage').innerText = data;
+            } catch (error) {
+                console.error('Error occurred while triggering Intel downloader:', error);
+            }
+        });
+        document.getElementById("csvParser").addEventListener("click", async function() {
+            try {
+                const response = await fetch('/csvParser');
+                const data = await response.text();
+                if (data) {
+                document.getElementById('statusMessage').innerText = "Parsing done";
+                }
+            } catch (error) {
+                console.error('Error occurred while triggering Intel downloader:', error);
+            }
+        });
 
 window.triggerScrape = function() {
     fetch('/scrape')
         .then(response => response.text())
         .then(data => {
             console.log(data);
-            // Here you can handle the data returned from the server after scraping
         })
         .catch(error => console.error('Error:', error));
 }
-
