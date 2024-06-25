@@ -38,27 +38,29 @@ http://localhost:3001/
 
 ## Buttons and their functions
 
-![Trigger new crawler](image.png)
+![Trigger new crawler](readme_images/image.png)
 
 Crawler button: This button triggers the web scraping process. It will get the links of all the processors from the Intel website and store them in the database.
-![Trigger New Scrape](image-1.png)
+![Trigger New Scrape](readme_images/image-1.png)
 
 New Scrape button: Opens every link from the crawler, scrapes all the available processors from the Intel website, and stores them in the database.
-![What happens](image-2.png)
 
-![Intel Downloader](image-3.png)
+![What happens](readme_images/image-2.png)
+
+
+![Intel Downloader](readme_images/image-3.png)
 Intel Downloader button: Downloads the processors from the links found in the scraping process and stores them in a folder. [This process takes about 30 minutes]
 
-![Trigger Csv Parser](image-4.png)
+![Trigger Csv Parser](readme_images/image-4.png)
 
 Csv Parser button: Parses the downloaded processors and stores them in the database.
 the file is located in parsed_processors.txt and contains everything the website needs to start comparing processors.
 
-![Search processor](image-5.png)
+![Search processor](readme_images/image-5.png)
 
 ## Compare !!
 
-![Comparaison](image-6.png)
+![Comparaison](readme_images/image-6.png)
 
 ## Author
 
