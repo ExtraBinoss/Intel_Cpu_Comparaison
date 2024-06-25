@@ -41,6 +41,7 @@ http://localhost:3001/
 ![Trigger new crawler](readme_images/image.png)
 
 Crawler button: This button triggers the web scraping process. It will get the links of all the processors from the Intel website and store them in the database.
+
 ![Trigger New Scrape](readme_images/image-1.png)
 
 New Scrape button: Opens every link from the crawler, scrapes all the available processors from the Intel website, and stores them in the database.
