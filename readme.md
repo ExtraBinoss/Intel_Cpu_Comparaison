@@ -1,4 +1,6 @@
-# Intel CPU comparasion
+[Intel CPU comparison 🔗](https://github.com/ExtraBinoss/Intel_Cpu_Comparaison)
+
+---
 
 ## Goal of this project
 
@@ -21,7 +23,7 @@ It was made out of curiosity and to learn more about web scraping and databases.
 2. Install the dependencies
 
 ```bash
-npm install package.json
+ $ npm install package.json
 ```
 
 3. Run the server
@@ -38,32 +40,47 @@ http://localhost:3001/
 
 ## Buttons and their functions
 
-![Trigger new crawler](readme_images/image.png)
+Crawler button:
 
-Crawler button: This button triggers the web scraping process. It will get the links of all the processors from the Intel website and store them in the database.
+![Trigger new crawler](project-markdowns/project-cpu/readme_images/image.png)
 
-![Trigger New Scrape](readme_images/image-1.png)
+This button triggers the web scraping process. It will get the links of all the processors from the Intel website and store them in the database.
 
-New Scrape button: Opens every link from the crawler, scrapes all the available processors from the Intel website, and stores them in the database.
+New Scrape button:
 
-![What happens](readme_images/image-2.png)
+![Trigger New Scrape](project-markdowns/project-cpu/readme_images/image-1.png)
 
+Opens every link from the crawler, scrapes all the available processors from the Intel website, and stores them in the database.
 
-![Intel Downloader](readme_images/image-3.png)
-Intel Downloader button: Downloads the processors from the links found in the scraping process and stores them in a folder. [This process takes about 30 minutes]
+What happens when clicking the New Scrape button:
 
-![Trigger Csv Parser](readme_images/image-4.png)
+![What happens](project-markdowns/project-cpu/readme_images/image-2.png)
 
-Csv Parser button: Parses the downloaded processors and stores them in the database.
+Intel Downloader button: 
+
+![Intel Downloader](project-markdowns/project-cpu/readme_images/image-3.png)
+
+Downloads the processors from the links found in the scraping process and stores them in a folder. [This process takes about 30 minutes]
+
+Csv Parser button:
+
+![Trigger Csv Parser](project-markdowns/project-cpu/readme_images/image-4.png)
+
+Parses the downloaded processors and stores them in the database.
 the file is located in parsed_processors.txt and contains everything the website needs to start comparing processors.
 
-![Search processor](readme_images/image-5.png)
 
-## Compare !!
+## Now lets compare processors !
 
-![Comparaison](readme_images/image-6.png)
+Step 1 : Searching processors 
+
+![Search processor](project-markdowns/project-cpu/readme_images/image-5.png)
+
+Step 2 : Add more processors to compare
+
+![Comparaison](project-markdowns/project-cpu/readme_images/image-6.png)
 
 ## Author
 
 - [Github](https://github.com/ExtraBinoss)
-- Student at Epitech Technology
+- Made during the second year at Epitech Technology
