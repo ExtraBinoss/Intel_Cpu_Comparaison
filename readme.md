@@ -1,4 +1,4 @@
-#[Intel CPU comparison 🔗](https://github.com/ExtraBinoss/Intel_Cpu_Comparaison)
+# [Intel CPU comparison 🔗](https://github.com/ExtraBinoss/Intel_Cpu_Comparaison)
 
 ---
 
